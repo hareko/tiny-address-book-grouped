@@ -4,7 +4,7 @@ This demo application shows the design and programming techniques used in my pro
 
 ## Functionality ##
 
-The main menu sections *Contacts* and *Groups* switch to according action, *Finish* terminates. A language can be specified on startup by *lng=* key (*en* is default, *ru* exists, *de* dictionary is empty).
+The main menu sections *Contacts* and *Groups* switch to according action, *Finish* terminates. A language can be specified on startup by *lng=key* (key *en* is default, *ru* exists, *de* dictionary is empty).
 
 ### Contacts ###
 
