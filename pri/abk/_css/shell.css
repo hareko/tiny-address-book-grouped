@@ -1,0 +1,108 @@
+/*
+ * layout style
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+*/
+.shell {
+  width: 550px;
+  border: medium solid silver;
+  position:relative;
+  margin: 1em auto;
+  text-align: center;
+}
+.contents {
+  background: none repeat scroll 0 0 #eeeeee;
+  padding: 0.2em 0.2em 0em 0.2em;
+}
+.action {
+  height: 2.5em;
+}
+.section {
+  float: left;
+  font-style: italic;
+  font-size: 0.9em;
+}
+.menu {
+  float: right;
+}
+.menu button {
+  float: right;
+  font-size: 0.9em;
+  padding-left: 0.5em;
+  text-decoration: underline;
+}
+.msgraw {
+  clear: both;
+  font-weight: normal;
+  font-size: 0.9em;
+  text-align: left;
+}
+.content  {
+  display: block;
+  overflow:auto;
+}
+table {
+  font-size:0.9em;
+  border: 0;
+  border-collapse:collapse;
+  color: black;
+}
+td {
+  vertical-align: top;
+}
+.command{
+  visibility: hidden;
+}
+.command button {
+  font-size: 0.75em;
+}
+.tables {
+  width: 525px; 
+  margin: auto;
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+.tables .tabwrap { 
+  width: 525px;
+  margin: auto;
+  border: 1px solid silver;
+}
+.tables .tabhead { 
+  width: 500px; 
+}
+.tables .tabhead td{ 
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.tables div { 
+  width: 525px; 
+  overflow:auto;
+}
+.tables .tabbody {
+  width: 500px; 
+}
+.tables .tabbody td{ 
+  text-align: left;
+  font-size: 0.85em;
+}
+.B1{
+  width: 5%;
+}
+.B2{
+  width: 17%;
+}
+.B3{
+  width: 17%;
+}
+.B4{
+  width: 34%;
+}
+.B5{
+  width: 12%;
+}
+.B6{
+  width: 15%;
+}

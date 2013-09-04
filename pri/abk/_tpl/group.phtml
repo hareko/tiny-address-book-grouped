@@ -1,0 +1,40 @@
+<?php
+/*
+ * section template
+ *
+ * @package Application
+ * @author Vallo Reima
+ * @copyright (C)2013
+ */
+$fld = ¤::_('txt.fld');
+$knds = ['afl' => ¤::_('txt.afln'), 'inh' => ¤::_('txt.inht')];
+$oprs = ['' => '--&gt;', 'M' => '&lt;-&gt;'];
+?>
+<form id="<?= $fid; ?>" class="edit">
+  <div id="<?= $fid; ?>_edt">
+    <label for="groupf" id="l_groupf"><?= $fld['group_id']; ?></label>
+    <select id="groupf" name="SL">
+      <?= ¤::SetNames($groups, 1, ''); ?>
+    </select>
+    <select id="opr" class="hide">
+      <?= ¤::SetNames($oprs, 0, 0); ?>
+    </select>
+    <label for="groupt" id="l_groupt" class="hide"><?= ¤::_('txt.grt'); ?></label>
+    <select id="groupt" class="hide">    
+    </select>
+  </div>
+  <div id="<?= $fid; ?>_qry" class="hide">
+    <label for="kind" id="l_kind"><?= ¤::_('txt.knd'); ?></label>
+    <select id="kind">    
+      <?= ¤::SetNames($knds, 0, 0); ?>
+    </select>
+    <label for="group_id" id="l_group_id"><?= $fld['group_id']; ?></label>
+    <select id="group_id">
+      <?= ¤::SetNames($groups, 1, ''); ?>
+    </select>
+  </div>
+</form>
+<div id="tables" class="tables"><?= $tbl->Display(); ?></div>         
+<div id="command" class="command">
+  <?= ¤::Commands($cms); ?>
+</div>

@@ -1,0 +1,36 @@
+/*
+ * specific style
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+*/
+.edit {
+  background-color: #dddddd;
+  border: 1px solid silver;
+  text-align: left;
+  font-size: 0.8em;
+  margin: 0 5px 0 10px;
+}
+.edit input {
+  vertical-align: top;
+}
+.tables .tabbody tr:hover{ 
+  text-decoration: underline;
+  cursor: default;
+}
+.tables .slt{
+  background-color: #cccccc;
+}
+.tables .dld{
+  text-decoration: line-through;
+}
+.R1{
+  width: 5%;
+}
+.R2{
+  width: 30%;
+}
+.R4{
+  width: 65%;
+}

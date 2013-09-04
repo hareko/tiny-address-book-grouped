@@ -1,0 +1,58 @@
+<?php
+/*
+ * layout template
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2012
+ */
+$transit = ¤::Enc(¤::$_->_ts, true);  /* data for JS */
+$nme = basename(__FILE__, TPL); /* modules filename */
+echo ¤::HtmlDoc();
+?>
+<html <?= ¤::HtmlHtml(); ?>>
+  <head>
+    <?= ¤::HtmlHead([$base]); ?>
+    <style type="text/css">
+<?php include(CSSD . $nme . '.css');
+?>
+    </style>
+    <?= ¤::HtmlScript([$base, 'common']); ?>
+    <script type="text/javascript">
+<?php include(JSD . $nme . '.js');
+?>
+    </script>
+    <script type="text/javascript">
+      window.onload = Shell;
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="header"><?= ¤::_('head'); ?></div>
+      <div class="contents">
+        <div class="action">
+          <div class="section" id="section"></div>
+          <div class="menu" id="menu">
+            <button type="button" name="<?= $btn['E'][0]; ?>" class="button-link"><?= $btn['E'][1]; ?></button>
+            <button type="button" name="<?= $btn['G'][0]; ?>" class="button-link"><?= $btn['G'][1]; ?></button>
+            <button type="button" name="<?= $btn['C'][0]; ?>" class="button-link"><?= $btn['C'][1]; ?></button>
+          </div>
+          <div class="msgraw" id="msgraw">
+            <noscript><?= ¤::_('txt.jsd'); ?></noscript>
+          </div>
+        </div>
+        <div id="content" class="content" style="height:<?= $hgt; ?>;">
+        </div>
+      </div>
+      <div class="footer unlink"><?= ¤::_('foot'); ?></div>
+    </div>
+    <form class="hide" id="transit" target="download" enctype="application/x-www-form-urlencoded" 
+          method="post" action="<?= ¤::_('url'); ?>">
+      <div><?= $transit; ?></div>
+      <input type="hidden" name="srv" value="tbl">
+      <input type="hidden" name="fnm" id="filename">">
+      <input type="hidden" name="wkf" id="workfile">
+    </form>
+    <iframe class="hide" name="download"></iframe>
+  </body>
+</html>

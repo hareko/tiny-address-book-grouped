@@ -1,0 +1,43 @@
+<?php
+/*
+ * section template
+ *
+ * @package Application
+ * @author Vallo Reima
+ * @copyright (C)2013
+ */
+$fld = ¤::_('txt.fld');
+?>
+<form id="<?= $fid; ?>">
+  <input id="id" type="hidden" value="">
+  <table class="change">
+    <tbody>
+      <tr>
+        <td><label for="fname" id="l_fname"><?= $fld['fname']; ?></label></td>
+        <td><input id="fname" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="lname" id="l_lname"><?= $fld['lname']; ?></label></td>
+        <td><input id="lname" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="street" id="l_street"><?= $fld['street']; ?></label></td>
+        <td><input id="street" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="zip" id="l_zip"><?= $fld['zip']; ?></label></td>
+        <td><input id="zip" type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="town" id="l_town_id"><?= $fld['town']; ?></label></td>
+        <td><select id="town_id">
+            <?= ¤::SetNames($towns, 2, ''); ?>
+          </select></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<div id="tables" class="tables"><span id="tabbody">dummy</span></div>         
+<div id="command" class="command">
+  <?= ¤::Commands($cms); ?>
+</div>

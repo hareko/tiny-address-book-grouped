@@ -1,0 +1,33 @@
+<?php
+/*
+ * table template
+ *
+ * @package Application
+ * @author Vallo Reima
+ * @copyright (C)2013
+ */
+?>
+<table class="tabwrap">
+  <tbody>
+    <tr>
+      <td>
+        <table class="tabhead">
+          <tbody id="tabhead">
+<?= $this->Row($this->cols, '#'); ?>
+          </tbody>
+        </table>  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div style="height:<?= $this->hgt; ?>;">    
+          <table class="tabbody">
+            <tbody id="tabbody">
+<?= $this->Rows(); ?>
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>	
+  </tbody>
+</table>

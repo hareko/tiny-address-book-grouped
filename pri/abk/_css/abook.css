@@ -1,0 +1,25 @@
+/*
+ * specific style
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+*/
+.change {
+  background-color: #dddddd;
+  border: 1px solid silver;
+  margin: auto;
+  margin-bottom: 1em;
+}
+.change td {
+  border: 0;
+  padding: 0.3em;
+  text-align: left;
+}
+.tables {
+  display: none;
+}
+.tables .tabbody tr:hover{ 
+  background-color: #cccccc;
+  cursor: default;
+}
