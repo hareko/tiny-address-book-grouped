@@ -79,7 +79,7 @@ function Inherit($tbl, $fld)
  *             grt - to group id
  *             opr - M/''
  *             ids - id list
- * out: [<to grf cnt>, <to grt cnt>] or false, <msg>
+ * out: [<to grf cnt>, <to grt cnt>] or false, <msg> 
  */ {
   $inhs = [$fld['grf'] => ['grt' => $fld['grt'], 'ids' => $fld['ids']]];
   if ($fld['opr'] == 'M') { /* mutual inheritance */

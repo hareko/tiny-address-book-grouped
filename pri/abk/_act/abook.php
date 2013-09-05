@@ -1,7 +1,7 @@
 <?php
 
 /*
- * main panel creator
+ * main panel creator 
  *
  * @package Application
  * @author Vallo Reima

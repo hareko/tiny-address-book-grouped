@@ -221,7 +221,7 @@ function Group(fid)
       /*  
        * fix saving results
        * in:  rlt -- result object
-       *      cmd -- command token
+       *      cmd -- command token 
        */
       var f = false;
       if (ts.inf.cmd === 'RM') {
