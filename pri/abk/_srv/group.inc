@@ -141,6 +141,7 @@ function Delete($tbl, $fld)
  */ {
   $f = true;
   $cnt = [0, 0]; /* deletes & inherits counter */
+  $ids = [];      /* deleted member ids */
   foreach ($fld['ids'] as $id) {
     $a = ¤::_('db')->Fetch($tbl, 'id', ['a.group_id' => $fld['grf'], 'a.contact_id' => $id]); /* get the id */
     if (count($a) == 1) {
@@ -152,6 +153,7 @@ function Delete($tbl, $fld)
         }
         $f = ¤::_('db')->Delete($tbl, ['id' => $cgi]);  /* delete a member */
         if ($f) {
+          $ids[] = $id;
           $cnt[0]++;
           $f = Remove(['inherits', $tbl], $fld['grf'], $id, $cnt);  /* remove inherits/members */
         } else {
@@ -166,7 +168,7 @@ function Delete($tbl, $fld)
     }
   }
   if ($f) {
-    $f = [$cnt[0], 0];
+    $f = $ids;
     $c = ¤::mb_str_replace('#1', $cnt[0], ¤::_('txt.mrmv'));
     $c = ¤::mb_str_replace('#2', $cnt[1], $c);   /* result info */
   } else if ($f === 0) {

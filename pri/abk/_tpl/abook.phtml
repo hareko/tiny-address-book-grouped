@@ -6,30 +6,29 @@
  * @author Vallo Reima
  * @copyright (C)2013
  */
-$fld = ¤::_('txt.fld');
 ?>
 <form id="<?= $fid; ?>">
   <input id="id" type="hidden" value="">
   <table class="change">
     <tbody>
       <tr>
-        <td><label for="fname" id="l_fname"><?= $fld['fname']; ?></label></td>
-        <td><input id="fname" type="text"></td>
+        <td><label for="fname" id="l_fname"><?= $fld['fname']['nme']; ?></label></td>
+        <td><input id="fname" type="text" size="30" maxlength="<?= $fld['fname']['len']; ?>"></td>
       </tr>
       <tr>
-        <td><label for="lname" id="l_lname"><?= $fld['lname']; ?></label></td>
-        <td><input id="lname" type="text"></td>
+        <td><label for="lname" id="l_lname"><?= $fld['lname']['nme']; ?></label></td>
+        <td><input id="lname" type="text" size="30" maxlength="<?= $fld['lname']['len']; ?>"></td>
       </tr>
       <tr>
-        <td><label for="street" id="l_street"><?= $fld['street']; ?></label></td>
-        <td><input id="street" type="text"></td>
+        <td><label for="street" id="l_street"><?= $fld['street']['nme']; ?></label></td>
+        <td><input id="street" type="text" size="30" maxlength="<?= $fld['street']['len']; ?>"></td>
       </tr>
       <tr>
-        <td><label for="zip" id="l_zip"><?= $fld['zip']; ?></label></td>
-        <td><input id="zip" type="text"></td>
+        <td><label for="zip" id="l_zip"><?= $fld['zip']['nme']; ?></label></td>
+        <td><input id="zip" type="text" size="30" maxlength="<?= $fld['zip']['len']; ?>"></td>
       </tr>
       <tr>
-        <td><label for="town" id="l_town_id"><?= $fld['town']; ?></label></td>
+        <td><label for="town" id="l_town_id"><?= $fld['town_id']['nme']; ?></label></td>
         <td><select id="town_id">
             <?= ¤::SetNames($towns, 2, ''); ?>
           </select></td>

@@ -16,7 +16,7 @@
   vertical-align: top;
 }
 .tables .tabbody tr:hover{ 
-  text-decoration: underline;
+  color: white;
   cursor: default;
 }
 .tables .slt{

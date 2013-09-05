@@ -114,6 +114,7 @@ function Group(fid)
         } else if (c === 'RM') { /* Remove */
           var s = ts.Get('rmvcfm').replace('#', Selected().length);
           if (confirm(s)) {
+            ts.inf.cmd = 'RM';
             Edit(c);
           }
         } else if (c === 'S') { /* Save */
@@ -202,10 +203,8 @@ function Group(fid)
        */
       var c = '';
       if (par.srv === 'grp') {
-        c = ts.inf.cmd;
-        Switch('');
-        Close(rlt, c);
         c = rlt.string;
+        Close(rlt);
       } else if (par.cmd === 'R') {
         c = rlt.string;
         $('tables').innerHTML = rlt.factor;
@@ -218,16 +217,16 @@ function Group(fid)
       $('msgraw').innerHTML = c;
     };
 
-    var Close = function(rlt, cmd) {
+    var Close = function(rlt) {
       /*  
        * fix saving results
        * in:  rlt -- result object
        *      cmd -- command token
        */
       var f = false;
-      if (cmd === 'RM') {
+      if (ts.inf.cmd === 'RM') {
         for (var i = 0; i < rlt.factor.length; i++) {
-          $(rlt.factor[i]).className = 'dld';
+          $('id' + rlt.factor[i]).className = 'dld';
         }
       } else if (Number(rlt.factor[0]) > 0) {
         f = true;
@@ -235,6 +234,7 @@ function Group(fid)
         frm.Set('groupf', frm.Get('groupt'));
         f = true;
       }
+      Switch('');
       if (f) {
         mgr = rlt.string;
         Command('sl');
