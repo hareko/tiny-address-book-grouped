@@ -313,7 +313,7 @@ function Group(fid)
       /*  
        * terminate
        */
-//      Events(false);
+      Events(false);
     };
 
     var Events = function(flg, evt) {
