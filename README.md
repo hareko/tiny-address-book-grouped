@@ -4,32 +4,21 @@ This demo application shows the design and programming techniques used in my pro
 
 ## Functionality ##
 
-The main menu sections *Contacts* and *Groups* switch to according action, *Finish* terminates. A language can be specified on startup 
-
-by *lng=key* (key *en* is default, *ru* exists, *de* dictionary is empty).
+The main menu sections *Contacts* and *Groups* switch to according action, *Finish* terminates. A language can be specified on startup by *lng=key* (key *en* is default, *ru* exists, *de* dictionary is empty).
 
 ### Contacts ###
 
-The database consists of *contacts* and *towns* tables containing First & Last Name, Street, Postcode and Town data. The records can 
-
-be added, deleted or modified. The table can be browsed and saved in XML format. Double-clicking on the row selects the record for 
-
-editing. The towns list must be edited outside.
+The database consists of *contacts* and *towns* tables containing First & Last Name, Street, Postcode and Town data. The records can be added, deleted or modified. The table can be browsed and saved in XML format. Double-clicking on the row selects the record for editing. The towns list must be edited outside.
 
 ### Groups ###
 
-The enhanced version allows to form the groups. The *cgroups* & *inherits* relations and *groups* tables hold the grouping data. The 
-
-contacts can be added to a group or inherited from another group. Clicking the table row selects the contact(s) to be added or 
-
-removed. The reports allow to query the groups membership and inheritance.  The groups list must be edited outside.
+The enhanced version allows to form the groups. The *cgroups* & *inherits* relations and *groups* tables hold the grouping data. The contacts can be added to a group or inherited from another group. Clicking the table row selects the contact(s) to be added or removed. The reports allow to query the groups membership and inheritance.  The groups list must be edited outside.
 
 **The demo is uploaded on [arc.vallo.me/abg].**
 
 ## Design & programming ##
 
 OOP MVC principles are followed both on the back and front end. The AJAX is used for client-server communications. See 
-
 [app.vregistry.com] regarding the techniques.
 
 ## Requirements ##
@@ -42,9 +31,7 @@ OOP MVC principles are followed both on the back and front end. The AJAX is used
 
 ## Installation ##
 
-Unpack the *abk.zip* to your local/remote webserver retaining the folder structure. Create and load the MySql database from the *sql* 
-
-files supplied. Find/change the connection properties in the configuration file */pri/abk/abk.xml* (node *db*):
+Unpack the *abk.zip* to your local/remote webserver retaining the folder structure. Create and load the MySql database from the *sql* files supplied. Find/change the connection properties in the configuration file */pri/abk/abk.xml* (node *db*):
 
 - nme - database name
 - usr - access username
