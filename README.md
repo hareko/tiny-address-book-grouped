@@ -1,8 +1,6 @@
 # Tiny Address Book Grouped #
 
-This demo application shows the design and programming techniques used in my projects. Some of the components of vRegistrator 
-
-framework are used. All the code is original (except some standard functions).
+This demo application shows the design and programming techniques used in my projects. Some of the components of vRegistry framework are used. All the code is original (except some standard functions).
 
 ## Functionality ##
 
